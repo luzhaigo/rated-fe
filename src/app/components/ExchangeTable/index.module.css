@@ -1,0 +1,13 @@
+.exchange-row {
+  cursor: pointer;
+}
+
+.name-cell {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  border-radius: 50%;
+  margin-right: 8px;
+}

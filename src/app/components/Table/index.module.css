@@ -1,0 +1,35 @@
+.exchange-table {
+  overflow-x: scroll;
+}
+
+.exchange-table-wrapper {
+  width: max-content;
+  margin: 0 auto;
+}
+
+.pagination {
+  margin: 24px auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.page-info {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  color: var(--grey-11);
+  font-size: var(--text-sm);
+}
+
+@media screen and (min-width: 800px) {
+  .pagination {
+    justify-content: center;
+  }
+  .page-info {
+    display: none;
+  }
+}
+
+.noData {
+  padding: 80px 0;
+}

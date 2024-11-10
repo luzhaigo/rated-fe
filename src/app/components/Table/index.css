@@ -1,0 +1,106 @@
+ul.react-paginate {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0;
+}
+ul.react-paginate .page-item-none {
+  display: none;
+}
+@media screen and (min-width: 800px) {
+  ul.react-paginate .page-item-none {
+    display: initial;
+  }
+}
+ul.react-paginate li a {
+  border-radius: var(--radius-sm);
+  border: gray 1px solid;
+  cursor: pointer;
+  color: var(--grey-11);
+  margin: 0 4px;
+  font-size: var(--text-md);
+  padding: 0 11px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+ul.react-paginate li.selected a {
+  background-color: var(--grey-a-3);
+  border-color: transparent;
+  color: var(--text-primary);
+  min-width: 32px;
+}
+ul.react-paginate li.disable,
+ul.react-paginate li.disabled a {
+  visibility: hidden;
+}
+
+.rc-table {
+  position: relative;
+  box-sizing: border-box;
+  font-size: var(--text-md);
+  color: var(--text-primary);
+}
+.rc-table-rtl {
+  direction: rtl;
+}
+.rc-table table {
+  width: 100%;
+  border-spacing: 0px;
+}
+.rc-table-thead {
+  margin: 0 1px;
+  border-bottom: 1px solid var(--stroke-base);
+  background: var(--neutral-6);
+  color: var(--grey-11);
+  font-size: var(--text-xs);
+  height: 42px;
+}
+.rc-table th,
+.rc-table td {
+  position: relative;
+  box-sizing: border-box;
+  white-space: normal;
+  word-break: break-word;
+  transition: box-shadow 0.3s;
+  padding: var(--spacing-sm) var(--spacing-lg);
+}
+.rc-table-cell.rc-table-cell-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.rc-table-cell.rc-table-cell-row-hover {
+  background: var(--grey-a-3);
+}
+.rc-table thead th {
+  text-align: center;
+}
+.rc-table td {
+  border-top: 1px solid var(--grey-a-4);
+}
+.rc-table-placeholder {
+  text-align: center;
+}
+.rc-table-content {
+  border-radius: var(--radius-sm);
+}
+.rc-table-row {
+  height: 52px;
+  transition: all 0.2s ease;
+  background: var(--grey-a-2);
+  text-decoration: none;
+}
+.rc-table thead .rc-table-cell-scrollbar::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1px;
+  width: 1px;
+  content: "";
+}
+.rc-table-rtl.rc-table thead .rc-table-cell-scrollbar::after {
+  right: -1px;
+  left: auto;
+}
