@@ -30,7 +30,7 @@ const Table = <T,>({ data, page, pageCount, ...rest }: Props<T>) => {
         <div className={styles["exchange-table-wrapper"]}>
           <RCTable
             {...rest}
-            data={data}
+            data={[]}
             emptyText={<p className={styles.noData}>No Data</p>}
           />
         </div>

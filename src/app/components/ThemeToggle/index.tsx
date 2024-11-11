@@ -21,7 +21,12 @@ const ThemeToggle: FC<Props> = ({ theme, setTheme }) => {
   }, []);
 
   return (
-    <DarkModeSwitch checked={isDarkMode} onChange={toggleDarkMode} size={20} />
+    <DarkModeSwitch
+      checked={isDarkMode}
+      onChange={toggleDarkMode}
+      size={20}
+      role="button"
+    />
   );
 };
 
