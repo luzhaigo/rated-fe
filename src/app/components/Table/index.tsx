@@ -19,7 +19,7 @@ const Table = <T,>({ data, page, pageCount, ...rest }: Props<T>) => {
     searchParams.set("page", `${selected + 1}`);
 
     router.push(`${window.location.pathname}?${searchParams.toString()}`, {
-      scroll: false,
+      scroll: document.documentElement.clientWidth < 800,
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
