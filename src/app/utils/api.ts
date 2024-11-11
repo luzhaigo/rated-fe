@@ -1,4 +1,5 @@
 import { GetExchangesParams, Exchange, Pagination } from "@/app/types";
+import { PAGE, PAGE_SIZE } from "@/app/constants";
 
 const API_ENDPOINT = `${process.env.EXCHANGES_API}/${process.env.EXCHANGES_API_VERSION}`;
 
@@ -21,7 +22,7 @@ const getAllExchanges = async (): Promise<Exchange[]> => {
  * Therefore, I implemented pagination on the server side.
  */
 export const getExchanges = async (
-  { size = 15, page = 1 } = {} as Partial<GetExchangesParams>
+  { size = PAGE_SIZE, page = PAGE } = {} as Partial<GetExchangesParams>
 ): Promise<Pagination<Exchange>> => {
   const exchanges: Exchange[] = await getAllExchanges();
 
