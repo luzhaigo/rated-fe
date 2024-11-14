@@ -24,7 +24,11 @@ const ThemeProvider = ({
   const value = useMemo(() => {
     return {
       theme,
-      setTheme: setTheme as (theme: Theme) => void,
+      setTheme: (theme: Theme) => {
+        document.documentElement.setAttribute("data-theme", theme);
+        document.cookie = `theme=${theme}; path=/; max-age=" + 365 * 24 * 60 * 60 + "; Secure; SameSite=Strict`;
+        setTheme(theme);
+      },
       toggle: () => setTheme(theme === "dark" ? "light" : "dark"),
     };
   }, [theme]);
